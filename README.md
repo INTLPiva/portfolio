@@ -1,8 +1,14 @@
-# React + Vite
+<h1 align="center">
+  💻<br>Portfólio - Lucas Piva
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](portfolio.png)
 
-Currently, two official plugins are available:
+<h4 align="center"><a href="https://portfolio-six-omega-18.vercel.app/">Clique para visitar o projeto</a></h4>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏗️ Tecnologias utilizadas
+
+- React.js
+- Bootstrap
+- HTML5
+- CSS3
