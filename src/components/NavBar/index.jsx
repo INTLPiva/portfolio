@@ -1,0 +1,89 @@
+import "./styles.css";
+import { useState } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import { Button } from "react-bootstrap";
+import {
+  AiOutlineHome,
+  AiOutlineFundProjectionScreen,
+  AiOutlineUser,
+} from "react-icons/ai";
+import { LuUserCog2 } from "react-icons/lu";
+import pdf from "../../assets/curriculo-lucaspiva.pdf";
+
+export function NavBar() {
+  const [expand, updateExpanded] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
+  window.addEventListener("scroll", scrollHandler);
+
+  return (
+    <Navbar
+      expanded={expand}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
+    >
+      <Container>
+        <Navbar.Brand className="d-flex">Portfólio</Navbar.Brand>
+
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => {
+            updateExpanded(expand ? false : "expanded");
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </Navbar.Toggle>
+
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto" defaultActiveKey="#home">
+            <Nav.Item>
+              <a href="#home-section" className="nav-link">
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              </a>
+            </Nav.Item>
+
+            <Nav.Item>
+              <a href="#about-section" className="nav-link">
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> Sobre
+              </a>
+            </Nav.Item>
+
+            <Nav.Item>
+              <a href="#skills-section" className="nav-link">
+                <LuUserCog2 style={{ marginBottom: "2px" }} /> Habilidades
+              </a>
+            </Nav.Item>
+
+            <Nav.Item>
+              <a href="#projects-section" className="nav-link">
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Projetos
+              </a>
+            </Nav.Item>
+
+            <Nav.Item className="fork-btn">
+              <Button href={pdf} target="_blank" className="fork-btn-inner">
+                Download CV
+              </Button>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
