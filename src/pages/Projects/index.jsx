@@ -4,6 +4,7 @@ import { ProjectCard } from "../../components/ProjectCard";
 import todo from "../../assets/projects/todo.png";
 import shopping from "../../assets/projects/shopping.png";
 import speech from "../../assets/projects/speech.png";
+import metaverso from "../../assets/projects/metaverso.png";
 
 export function Projects() {
   return (
@@ -18,7 +19,6 @@ export function Projects() {
             <Col md={4} className="project-card">
               <ProjectCard
                 imgPath={todo}
-                isBlog={false}
                 title="Lista de Tarefas"
                 description="Aplicação Web desenvolvido em React para criar, excluir e marcar tarefas como concluídas."
                 ghLink="https://github.com/INTLPiva/lista-de-tarefas"
@@ -28,8 +28,17 @@ export function Projects() {
 
             <Col md={4} className="project-card">
               <ProjectCard
+                imgPath={metaverso}
+                title="Metaverso"
+                description="Aplicação Web desenvolvido em Next.js para simular um metaverso."
+                ghLink="https://github.com/INTLPiva/metaverso-app"
+                demoLink="https://metaverso-app.vercel.app/"
+              />
+            </Col>
+
+            <Col md={4} className="project-card">
+              <ProjectCard
                 imgPath={shopping}
-                isBlog={false}
                 title="Protótipo de E-Commerce"
                 description="Protótipo de um E-Commerce que contém sistema de cadastro, login, carrinho de compras e favoritos."
                 ghLink="https://github.com/INTLPiva/shopping"
@@ -40,7 +49,6 @@ export function Projects() {
             <Col md={4} className="project-card">
               <ProjectCard
                 imgPath={speech}
-                isBlog={false}
                 title="Reconhecimento de voz"
                 description="Projeto que converte a fala em texto desenvolvido com ReactJS para testar a biblioteca de reconhecimento de voz."
                 ghLink="https://github.com/INTLPiva/react-speech-recognition"
