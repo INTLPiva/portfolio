@@ -5,6 +5,7 @@ import todo from "../../assets/projects/todo.png";
 import shopping from "../../assets/projects/shopping.png";
 import speech from "../../assets/projects/speech.png";
 import metaverso from "../../assets/projects/metaverso.png";
+import oncar from "../../assets/projects/oncar.png";
 
 export function Projects() {
   return (
@@ -18,11 +19,11 @@ export function Projects() {
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="project-card">
               <ProjectCard
-                imgPath={todo}
-                title="Lista de Tarefas"
-                description="Aplicação Web desenvolvido em React para criar, excluir e marcar tarefas como concluídas."
-                ghLink="https://github.com/INTLPiva/lista-de-tarefas"
-                demoLink="https://lista-de-tarefas-ebon-eta.vercel.app/"
+                imgPath={oncar}
+                title="OnCar App"
+                description="Aplicação Web Fullstack com o Frontend desenvolvido utilizando React e o Backend utilizando NestJS com PostgreSQL. Permite cadastrar, editar, excluir, pesquisar um carro e simular score do usuário."
+                ghLink="https://github.com/INTLPiva/oncar-app"
+                demoLink="https://front-oncar.vercel.app/"
               />
             </Col>
 
@@ -33,6 +34,16 @@ export function Projects() {
                 description="Aplicação Web desenvolvido em Next.js para simular um metaverso."
                 ghLink="https://github.com/INTLPiva/metaverso-app"
                 demoLink="https://metaverso-app.vercel.app/"
+              />
+            </Col>
+
+            <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath={todo}
+                title="Lista de Tarefas"
+                description="Aplicação Web desenvolvido em React para criar, excluir e marcar tarefas como concluídas."
+                ghLink="https://github.com/INTLPiva/lista-de-tarefas"
+                demoLink="https://lista-de-tarefas-ebon-eta.vercel.app/"
               />
             </Col>
 
